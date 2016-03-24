@@ -1,0 +1,5 @@
+{
+	"ImportPath": "github.com/l337ch/techx-docker-demo",
+	"GoVersion": "go1.6",
+	"Deps": []
+}
