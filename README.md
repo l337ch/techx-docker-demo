@@ -22,7 +22,19 @@ if [[ ! -d "$HOME/bin" ]]; then mkdir -p "$HOME/bin"; fi && \
 curl -L https://github.com/docker/machine/releases/download/v0.6.0/docker-machine-Windows-x86_64.exe > "$HOME/bin/docker-machine.exe" && \
 chmod +x "$HOME/bin/docker-machine.exe"
 ```
+##Vagrant
+Let's get up and running with vagrant with some demos.
 
+####TL;DR
+For the impatient, you can get a single machine running by running:
+
+```bash
+vagrant init hashicorp/precise64
+vagrant up
+```
+
+This will create a default Vagantfile using an Ubuntu based `box` from Altas.
+Running `vagrant up` in the same location as the Vagrantfile will create a local VirtualBox Machine.
 
 ##License
 
