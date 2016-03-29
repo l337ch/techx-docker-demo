@@ -94,7 +94,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 ```
 ##Docker Container
 ###Creating a Docker Image
-A Docker container is built from a Dockerfile which is a text document that contains commands to assemble an image. An example Dockerfile is found in the 'docker' directory. To create an image, run `build -t nginx-demo .` from within the 'docker' directory.
+A Docker container is built from a Dockerfile which is a text document that contains commands to assemble an image. An example Dockerfile is found in the 'docker-web' directory. To create an image, run `docker build -t nginx-demo .` from within the 'docker-web' directory.
 You will find the image when you run `docker images`.
 
 ###Running a Docker Container
@@ -105,7 +105,11 @@ $ docker ps
 CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS              PORTS               NAMES
 e762bfb0efb8        nginx               "nginx -g 'daemon of   7 minutes ago       Up 7 minutes                            cocky_bardeen
 ```
+You can access the running nginx server by using a browser and going to http://172.16.1.100
 
+###Docker applications
+An example of dockerizing and application is found in the 'docker-web' directory.
+The included Makefile will create and build a Docker images which can be launched by running `docker run -d --net host web-demo`.
 
 ##License
 
