@@ -92,6 +92,20 @@ Run `docker ps` to validate that the installation of Docker Engine was successfu
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
+##Docker Container
+###Creating a Docker Image
+A Docker container is built from a Dockerfile which is a text document that contains commands to assemble an image. An example Dockerfile is found in the 'docker' directory. To create an image, run `build -t nginx-demo .` from within the 'docker' directory.
+You will find the image when you run `docker images`.
+
+###Running a Docker Container
+Using the image built previously, run `docker run -d --net host nginx-demo`. Running `docker ps` should output something similar to:
+
+```bash
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS              PORTS               NAMES
+e762bfb0efb8        nginx               "nginx -g 'daemon of   7 minutes ago       Up 7 minutes                            cocky_bardeen
+```
+
 
 ##License
 
