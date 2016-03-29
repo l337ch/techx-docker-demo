@@ -3,6 +3,27 @@ Using vagrant and docker in your development environment.
 
 __NOTE__ The following source material is target at Windows users. YMMV if you attempt to try this with any other system.
 
+## Installing
+###Prerequisites
+To run the examples in this demo, you will to install the following:
+- Ruby - http://rubyinstaller.org/
+- Git with git-bash - https://git-scm.com/download/win
+- VirtualBox - https://www.virtualbox.org/wiki/Downloads
+- Text editor such as VIM or EMACS or Notepad ++
+
+### Install Vagrant
+The Vagrant installation package can be found at https://www.vagrantup.com/downloads.html. Run the install package after it is downloaded, accepting the default in the process.
+
+### Install Docker Machine
+Run the following to install Docker Machine on a Windows machine.
+
+```bash
+if [[ ! -d "$HOME/bin" ]]; then mkdir -p "$HOME/bin"; fi && \
+curl -L https://github.com/docker/machine/releases/download/v0.6.0/docker-machine-Windows-x86_64.exe > "$HOME/bin/docker-machine.exe" && \
+chmod +x "$HOME/bin/docker-machine.exe"
+```
+
+
 ##License
 
 Copyright (c) <2016> Lee Chang
