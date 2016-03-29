@@ -9,7 +9,7 @@ To run the examples in this demo, you will to install the following:
 - Ruby - http://rubyinstaller.org/
 - Git with git-bash - https://git-scm.com/download/win
 - VirtualBox - https://www.virtualbox.org/wiki/Downloads
-- Text editor such as VIM or EMACS or Notepad ++
+- A Text editor such as VIM or EMACS or Notepad ++
 
 ### Install Vagrant
 The Vagrant installation package can be found at https://www.vagrantup.com/downloads.html. Run the install package after it is downloaded, accepting the default in the process.
@@ -84,6 +84,13 @@ docker-machine create -d generic \
 --generic-ip-address 172.16.1.100 \
 --engine-install-url "https://get.docker.com" \
 default
+```
+Once Docker Engine has completed being installed on the machine, copy the Docker Engine's profile by running `eval "$(docker-machine env default)"` 
+Run `docker ps` to validate that the installation of Docker Engine was successful. You should get output similar to:
+
+```bash
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
 
 ##License
